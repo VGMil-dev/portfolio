@@ -71,33 +71,56 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="relative aspect-[4/5] max-w-[400px] ml-auto">
-            {/* Architectural Frame Accents */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-brand-secondary/40 z-0"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b border-l border-brand-secondary/40 z-0"></div>
+          <div className="relative aspect-[4/5] max-w-[420px] ml-auto">
+            {/* Geometric Outlines (Behind) */}
+            <div 
+              className="absolute inset-0 border border-brand-secondary/30 translate-x-4 translate-y-4 z-0 transition-transform duration-700 hover:translate-x-6 hover:translate-y-6"
+              style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 85%, 85% 100%, 0 100%, 0 15%)' }}
+            ></div>
+            <div 
+              className="absolute inset-0 border border-brand-primary/20 -translate-x-2 -translate-y-2 z-0"
+              style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)' }}
+            ></div>
+
+            {/* Architectural Grid Details */}
+            <svg className="absolute -top-6 -left-6 w-24 h-24 text-brand-secondary/20 z-0" viewBox="0 0 100 100">
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" />
+              </pattern>
+              <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
             
-            {/* Main Image Container */}
-            <div className="relative z-10 w-full h-full overflow-hidden rounded-sm border border-brand-outline-variant/30 bg-brand-surface-container-lowest shadow-2xl">
+            {/* Main Image Container with Geometric Cut */}
+            <div 
+              className="relative z-10 w-full h-full overflow-hidden bg-brand-surface-container-lowest shadow-2xl group"
+              style={{ 
+                clipPath: 'polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)'
+              }}
+            >
               <img 
                 src="/images/me.png" 
                 alt="Milton Velásquez" 
-                className="w-full h-full object-cover filter contrast-[1.05] brightness-[1.02]"
+                className="w-full h-full object-cover filter contrast-[1.05] brightness-[1.02] transform transition-transform duration-1000 group-hover:scale-105"
               />
               
               {/* Subtle Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-surface/40 to-transparent mix-blend-multiply"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-surface/60 via-transparent to-transparent mix-blend-multiply"></div>
+              
+              {/* Inner Architectural Border */}
+              <div className="absolute inset-0 border-[1px] border-brand-outline-variant/30 z-20 pointer-events-none" style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%)' }}></div>
             </div>
 
-            {/* Floating Detail */}
+            {/* Floating Detail with Geometric Shape */}
             <motion.div 
-              className="absolute -bottom-8 -right-8 bg-brand-surface border border-brand-outline-variant/30 p-4 rounded-sm shadow-xl z-20 backdrop-blur-md hidden lg:block"
+              className="absolute -bottom-6 -right-6 bg-brand-surface/90 border border-brand-outline-variant/30 p-4 shadow-xl z-20 backdrop-blur-md hidden lg:block"
+              style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 15px 100%, 0 calc(100% - 15px))' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse"></div>
-                <span className="text-label-caps text-brand-primary text-[10px] tracking-[0.2em]">Based in Ecuador</span>
+                <div className="w-2 h-2 rounded-sm bg-brand-secondary animate-pulse"></div>
+                <span className="text-label-caps text-brand-primary text-[10px] tracking-[0.2em] uppercase">Based in Ecuador</span>
               </div>
             </motion.div>
           </div>
