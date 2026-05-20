@@ -100,7 +100,7 @@ export function Hero() {
               <img 
                 src="/images/me.png" 
                 alt="Milton Velásquez" 
-                className="w-full h-full object-cover filter contrast-[1.05] brightness-[1.02] transform transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover filter contrast-[1.05] brightness-[1.02] transform -scale-x-100 transition-transform duration-1000 group-hover:-scale-x-105 group-hover:scale-y-105"
               />
               
               {/* Subtle Overlay Gradient */}
