@@ -1,0 +1,46 @@
+{
+  "header": {
+    "nav": {
+      "expertise": "Experiencia",
+      "architecture": "Arquitectura",
+      "techStack": "Stack Tecnológico",
+      "contact": "Contacto"
+    },
+    "viewGithub": "Ver GitHub"
+  },
+  "hero": {
+    "structuralPrecision": "Precisión Estructural",
+    "title1": "Ingeniería de",
+    "title2": "ecosistemas transaccionales escalables.",
+    "description": "Diseño y arquitectura de lógica de negocio compleja utilizando Arquitectura Limpia y Diseño Orientado al Dominio (DDD). Entregando código altamente mantenible y soluciones de base de datos optimizadas.",
+    "viewArchitecture": "Ver Arquitectura",
+    "contactMe": "Contáctame"
+  },
+  "techStack": {
+    "coreCompetencies": "Competencias Core",
+    "technicalArsenal": "Arsenal Técnico",
+    "nestJS": "NestJS",
+    "nodeJS": "Node.js",
+    "postgreSQL": "PostgreSQL",
+    "microservices": "Microservicios",
+    "cicd": "Pipelines CI/CD",
+    "cleanArchitecture": "Arquitectura Limpia"
+  },
+  "projects": {
+    "selectedWorks": "Trabajos Seleccionados",
+    "architecturalHighlights": "Hitos Arquitectónicos",
+    "description": "Una muestra de lógica de negocio estructurada, optimización de bases de datos y despliegues de infraestructura de alta disponibilidad.",
+    "list": {
+      "ecosystem": {
+        "title": "Ecosistemas Transaccionales",
+        "category": "Arquitectura Backend",
+        "description": "Construcción de APIs robustas utilizando NestJS y PostgreSQL, implementando arquitecturas hexagonales para una separación estricta de responsabilidades."
+      },
+      "cicd": {
+        "title": "Fragments CI/CD",
+        "category": "Infraestructura",
+        "description": "Diseño de microservicios escalables con flujos de despliegue automatizados utilizando GitHub Actions y entornos Linux avanzados."
+      }
+    }
+  }
+}

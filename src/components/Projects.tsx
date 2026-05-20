@@ -1,34 +1,37 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { ArrowUpRight } from 'lucide-react';
 
-const projects = [
-  {
-    id: 'ecosystem',
-    title: 'Transactional Ecosystems',
-    category: 'Backend Architecture',
-    description: 'Constructed robust APIs using NestJS and PostgreSQL, implementing hexagonal architectures for strict separation of concerns.',
-    placeholder: 'project-ecosystem.png'
-  },
-  {
-    id: 'cicd',
-    title: 'Fragments CI/CD',
-    category: 'Infrastructure',
-    description: 'Designed scalable microservices with automated deployment flows utilizing GitHub Actions and advanced Linux environments.',
-    placeholder: 'project-cicd.png'
-  }
-];
-
 export function Projects() {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      id: 'ecosystem',
+      title: t('projects.list.ecosystem.title'),
+      category: t('projects.list.ecosystem.category'),
+      description: t('projects.list.ecosystem.description'),
+      placeholder: 'project-ecosystem.png'
+    },
+    {
+      id: 'cicd',
+      title: t('projects.list.cicd.title'),
+      category: t('projects.list.cicd.category'),
+      description: t('projects.list.cicd.description'),
+      placeholder: 'project-cicd.png'
+    }
+  ];
+
   return (
     <section id="architecture" className="py-[120px] bg-brand-canvas relative z-10 transition-colors duration-300">
       <div className="max-w-[1280px] mx-auto w-full px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
-            <span className="text-label-caps text-brand-secondary mb-4 block transition-colors duration-300">Selected Works</span>
-            <h2 className="text-headline-lg text-brand-primary transition-colors duration-300">Architectural Highlights</h2>
+            <span className="text-label-caps text-brand-secondary mb-4 block transition-colors duration-300">{t('projects.selectedWorks')}</span>
+            <h2 className="text-headline-lg text-brand-primary transition-colors duration-300">{t('projects.architecturalHighlights')}</h2>
           </div>
           <p className="text-body-md text-brand-on-surface-variant max-w-md transition-colors duration-300">
-            A showcase of structured business logic, database optimization, and high-availability infrastructure deployments.
+            {t('projects.description')}
           </p>
         </div>
 

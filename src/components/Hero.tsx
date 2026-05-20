@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -21,6 +22,8 @@ const itemVariants: Variants = {
 };
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Background Texture */}
@@ -38,24 +41,24 @@ export function Hero() {
         >
           <motion.div variants={itemVariants} className="mb-6 flex items-center gap-4">
             <div className="h-[1px] w-12 bg-brand-secondary"></div>
-            <span className="text-label-caps text-brand-secondary">Structural Precision</span>
+            <span className="text-label-caps text-brand-secondary">{t('hero.structuralPrecision')}</span>
           </motion.div>
           
           <motion.h1 variants={itemVariants} className="text-display-xl-mobile md:text-display-xl text-brand-primary mb-8">
-            Engineering scalable <br />
-            <span className="text-brand-on-surface-variant font-normal">transactional ecosystems.</span>
+            {t('hero.title1')} <br />
+            <span className="text-brand-on-surface-variant font-normal">{t('hero.title2')}</span>
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-body-lg text-brand-on-surface-variant mb-12 max-w-2xl leading-relaxed">
-            I design and architect complex business logic using Clean Architecture and Domain-Driven Design (DDD). Delivering highly maintainable code and optimized database solutions.
+            {t('hero.description')}
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex gap-6 items-center">
             <button className="px-8 py-4 bg-brand-primary text-brand-on-primary font-semibold text-sm tracking-widest uppercase rounded-sm border border-brand-secondary/50 hover:bg-brand-primary-container hover:shadow-ambient-hover transition-all duration-300">
-              View Architecture
+              {t('hero.viewArchitecture')}
             </button>
             <a href="#contact" className="text-sm font-semibold tracking-widest uppercase text-brand-primary hover:text-brand-secondary transition-colors duration-300 flex items-center gap-2">
-              Contact Me 
+              {t('hero.contactMe')} 
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </a>
           </motion.div>

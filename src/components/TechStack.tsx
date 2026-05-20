@@ -1,22 +1,25 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Server, Database, Container, Terminal, GitBranch, LayoutTemplate } from 'lucide-react';
 
-const technologies = [
-  { name: 'NestJS', icon: Server },
-  { name: 'Node.js', icon: Terminal },
-  { name: 'PostgreSQL', icon: Database },
-  { name: 'Microservices', icon: Container },
-  { name: 'CI/CD Pipelines', icon: GitBranch },
-  { name: 'Clean Architecture', icon: LayoutTemplate },
-];
-
 export function TechStack() {
+  const { t } = useTranslation();
+
+  const technologies = [
+    { name: t('techStack.nestJS'), icon: Server },
+    { name: t('techStack.nodeJS'), icon: Terminal },
+    { name: t('techStack.postgreSQL'), icon: Database },
+    { name: t('techStack.microservices'), icon: Container },
+    { name: t('techStack.cicd'), icon: GitBranch },
+    { name: t('techStack.cleanArchitecture'), icon: LayoutTemplate },
+  ];
+
   return (
     <section id="tech-stack" className="py-[120px] bg-brand-surface relative z-10 border-t border-brand-outline-variant/20 transition-colors duration-300">
       <div className="max-w-[1280px] mx-auto w-full px-6">
         <div className="text-center mb-16">
-          <span className="text-label-caps text-brand-secondary mb-4 block transition-colors duration-300">Core Competencies</span>
-          <h2 className="text-headline-lg text-brand-primary transition-colors duration-300">Technical Arsenal</h2>
+          <span className="text-label-caps text-brand-secondary mb-4 block transition-colors duration-300">{t('techStack.coreCompetencies')}</span>
+          <h2 className="text-headline-lg text-brand-primary transition-colors duration-300">{t('techStack.technicalArsenal')}</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">

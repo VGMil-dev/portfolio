@@ -1,0 +1,46 @@
+{
+  "header": {
+    "nav": {
+      "expertise": "Expertise",
+      "architecture": "Architecture",
+      "techStack": "Tech Stack",
+      "contact": "Contact"
+    },
+    "viewGithub": "View GitHub"
+  },
+  "hero": {
+    "structuralPrecision": "Structural Precision",
+    "title1": "Engineering scalable",
+    "title2": "transactional ecosystems.",
+    "description": "I design and architect complex business logic using Clean Architecture and Domain-Driven Design (DDD). Delivering highly maintainable code and optimized database solutions.",
+    "viewArchitecture": "View Architecture",
+    "contactMe": "Contact Me"
+  },
+  "techStack": {
+    "coreCompetencies": "Core Competencies",
+    "technicalArsenal": "Technical Arsenal",
+    "nestJS": "NestJS",
+    "nodeJS": "Node.js",
+    "postgreSQL": "PostgreSQL",
+    "microservices": "Microservices",
+    "cicd": "CI/CD Pipelines",
+    "cleanArchitecture": "Clean Architecture"
+  },
+  "projects": {
+    "selectedWorks": "Selected Works",
+    "architecturalHighlights": "Architectural Highlights",
+    "description": "A showcase of structured business logic, database optimization, and high-availability infrastructure deployments.",
+    "list": {
+      "ecosystem": {
+        "title": "Transactional Ecosystems",
+        "category": "Backend Architecture",
+        "description": "Constructed robust APIs using NestJS and PostgreSQL, implementing hexagonal architectures for strict separation of concerns."
+      },
+      "cicd": {
+        "title": "Fragments CI/CD",
+        "category": "Infrastructure",
+        "description": "Designed scalable microservices with automated deployment flows utilizing GitHub Actions and advanced Linux environments."
+      }
+    }
+  }
+}
