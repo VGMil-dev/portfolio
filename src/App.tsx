@@ -23,19 +23,19 @@ function App() {
         <TechStack />
       </main>
 
-      <footer id="contact" className="bg-brand-primary text-brand-on-primary py-12 relative z-10">
+      <footer id="contact" className="bg-brand-surface-container-lowest text-brand-on-surface py-12 relative z-10 border-t border-brand-outline-variant/20 transition-colors duration-300">
         <div className="max-w-[1280px] mx-auto w-full px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded bg-brand-secondary flex items-center justify-center">
-              <div className="w-3 h-3 border-2 border-brand-primary rotate-45"></div>
+            <div className="w-8 h-8 rounded bg-brand-secondary flex items-center justify-center transition-colors duration-300">
+              <div className="w-3 h-3 border-2 border-brand-surface-container-lowest rotate-45 transition-colors duration-300"></div>
             </div>
-            <span className="text-label-caps tracking-widest text-white">Milton Velásquez</span>
+            <span className="text-label-caps tracking-widest font-bold transition-colors duration-300">Milton Velásquez</span>
           </div>
           
-          <div className="flex gap-6 text-label-caps text-brand-on-primary-container">
-            <a href="mailto:info@vgmils.dev" className="hover:text-brand-secondary transition-colors">info@vgmils.dev</a>
-            <a href="https://github.com/vGMil-dev/" target="_blank" rel="noreferrer" className="hover:text-brand-secondary transition-colors">GitHub</a>
-            <a href="https://www.linkedin.com/in/milton-velasquez-g/" target="_blank" rel="noreferrer" className="hover:text-brand-secondary transition-colors">LinkedIn</a>
+          <div className="flex gap-6 text-label-caps text-brand-on-surface-variant">
+            <a href="mailto:info@vgmils.dev" className="hover:text-brand-primary transition-colors">info@vgmils.dev</a>
+            <a href="https://github.com/vGMil-dev/" target="_blank" rel="noreferrer" className="hover:text-brand-primary transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/milton-velasquez-g/" target="_blank" rel="noreferrer" className="hover:text-brand-primary transition-colors">LinkedIn</a>
           </div>
         </div>
       </footer>

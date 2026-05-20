@@ -12,11 +12,11 @@ const technologies = [
 
 export function TechStack() {
   return (
-    <section id="tech-stack" className="py-[120px] bg-brand-surface relative z-10 border-t border-brand-outline-variant/20">
+    <section id="tech-stack" className="py-[120px] bg-brand-surface relative z-10 border-t border-brand-outline-variant/20 transition-colors duration-300">
       <div className="max-w-[1280px] mx-auto w-full px-6">
         <div className="text-center mb-16">
-          <span className="text-label-caps text-brand-secondary mb-4 block">Core Competencies</span>
-          <h2 className="text-headline-lg text-brand-primary">Technical Arsenal</h2>
+          <span className="text-label-caps text-brand-secondary mb-4 block transition-colors duration-300">Core Competencies</span>
+          <h2 className="text-headline-lg text-brand-primary transition-colors duration-300">Technical Arsenal</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -29,7 +29,7 @@ export function TechStack() {
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="bg-white aspect-square flex flex-col items-center justify-center p-6 border border-brand-outline-variant/30 rounded-sm hover:border-brand-secondary/50 hover:shadow-ambient transition-all duration-300 group"
+                className="bg-brand-surface-container-low aspect-square flex flex-col items-center justify-center p-6 border border-brand-outline-variant/30 rounded-sm hover:border-brand-secondary/50 hover:shadow-ambient transition-all duration-300 group"
               >
                 <div className="text-brand-outline mb-4 group-hover:text-brand-secondary transition-colors duration-300 transform group-hover:scale-110">
                   <Icon size={32} strokeWidth={1.5} />

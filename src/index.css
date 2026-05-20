@@ -16,11 +16,11 @@
   --color-brand-outline: #70787b;
   --color-brand-outline-variant: #bfc8ca;
   
-  --color-brand-primary: #004b57; /* Adjusted from 00333c per text rules */
+  --color-brand-primary: #004b57;
   --color-brand-on-primary: #ffffff;
   --color-brand-primary-container: #004b57;
   
-  --color-brand-secondary: #d4af37; /* Adjusted for brushed gold per text rules */
+  --color-brand-secondary: #d4af37;
   --color-brand-on-secondary: #ffffff;
   
   --color-brand-background: #f8f9fa;
@@ -48,12 +48,44 @@
   --spacing-stack-lg: 32px;
 }
 
+/* Dark Mode Overrides */
+.dark {
+  --color-brand-surface: #111415;
+  --color-brand-surface-dim: #111415;
+  --color-brand-surface-bright: #373a3a;
+  --color-brand-surface-container-lowest: #0c0f0f;
+  --color-brand-surface-container-low: #191c1d;
+  --color-brand-surface-container: #1d2021;
+  --color-brand-surface-container-high: #282a2b;
+  --color-brand-surface-container-highest: #323536;
+  --color-brand-on-surface: #e1e3e3;
+  --color-brand-on-surface-variant: #bfc8ca;
+  --color-brand-inverse-surface: #e1e3e3;
+  --color-brand-inverse-on-surface: #2e3132;
+  --color-brand-outline: #8a9295;
+  --color-brand-outline-variant: #40484a;
+  
+  --color-brand-primary: #96d0de;
+  --color-brand-on-primary: #00363f;
+  --color-brand-primary-container: #004b57;
+  
+  --color-brand-secondary: #e9c349;
+  --color-brand-on-secondary: #3c2f00;
+  
+  --color-brand-background: #111415;
+  --color-brand-on-background: #e1e3e3;
+  
+  --color-brand-neutral: #e1e3e3;
+  --color-brand-canvas: #111415;
+}
+
 @layer base {
   html {
     font-family: var(--font-sans);
     background-color: var(--color-brand-canvas);
     color: var(--color-brand-neutral);
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   body {
