@@ -32,9 +32,9 @@ export function Hero() {
         style={{ backgroundImage: 'url(/images/hero-bg.png)' }}
       ></div>
 
-      <div className="max-w-[1280px] mx-auto w-full px-6 relative z-10 grid md:grid-cols-12 gap-6">
+      <div className="max-w-[1280px] mx-auto w-full px-6 relative z-10 grid md:grid-cols-12 gap-12 items-center">
         <motion.div 
-          className="col-span-12 md:col-span-8 lg:col-span-7"
+          className="col-span-12 md:col-span-7 lg:col-span-7"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -62,6 +62,45 @@ export function Hero() {
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </a>
           </motion.div>
+        </motion.div>
+
+        {/* Profile Image Section */}
+        <motion.div 
+          className="col-span-12 md:col-span-5 lg:col-span-5 relative hidden md:block"
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="relative aspect-[4/5] max-w-[400px] ml-auto">
+            {/* Architectural Frame Accents */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 border-t border-r border-brand-secondary/40 z-0"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b border-l border-brand-secondary/40 z-0"></div>
+            
+            {/* Main Image Container */}
+            <div className="relative z-10 w-full h-full overflow-hidden rounded-sm border border-brand-outline-variant/30 bg-brand-surface-container-lowest shadow-2xl">
+              <img 
+                src="/images/me.png" 
+                alt="Milton Velásquez" 
+                className="w-full h-full object-cover filter contrast-[1.05] brightness-[1.02]"
+              />
+              
+              {/* Subtle Overlay Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-surface/40 to-transparent mix-blend-multiply"></div>
+            </div>
+
+            {/* Floating Detail */}
+            <motion.div 
+              className="absolute -bottom-8 -right-8 bg-brand-surface border border-brand-outline-variant/30 p-4 rounded-sm shadow-xl z-20 backdrop-blur-md hidden lg:block"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1 }}
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse"></div>
+                <span className="text-label-caps text-brand-primary text-[10px] tracking-[0.2em]">Based in Ecuador</span>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
